@@ -1,0 +1,12 @@
+﻿<div class='full-width btn-group' data-ng-class='{open: open}'>
+    <input type='hidden' ng-model="required" required>
+    <button class='overflow edit-input dropdown-toggle' data-ng-click='open=!open;openDropdown()'>
+        {{ngModel | multiSelectValues}}
+        <span class='pull-right caret'></span>
+    </button>
+    <ul class='dropdown-menu drop-down'>
+        <li data-ng-repeat='option in ngDropdown' class='pointer'>
+            <a data-ng-click='setSelectedItem()'><h1>{{option.name}}<span data-ng-class='isChecked(option.id)'></span></h1></a>
+        </li>
+    </ul>
+</div>

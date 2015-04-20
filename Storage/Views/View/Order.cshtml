@@ -1,0 +1,17 @@
+﻿<h1 ng-controller="OrderController">
+    <table class="table" ng-controller="OrderController">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Available</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="data in order track by data.productId">
+                <td>{{data.productName}}</td>
+                <td>{{data.count | countExist}}</td>
+                <td><span ng-click="buyProduct(data.productId)" class="pull-right glyphicon glyphicon-shopping-cart pointer"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</h1>

@@ -1,0 +1,23 @@
+﻿<h1>
+    <table editable-table api="Detail" ng-controller="MaterialDropdown">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Material</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{data.name}}</td>
+                <td>{{data.material.name}}</td>
+                <td>{{data.materialCount}}</td>
+            </tr>
+            <tr>
+                <td><text-input ng-model="data.name"></text-input></td>
+                <td><drop-down ng-model="data.material" ng-dropdown="dropdownData"></drop-down></td>
+                <td><number-input ng-model="data.materialCount"></number-input></td>
+            </tr>
+        </tbody>
+    </table>
+    </h1>
